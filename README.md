@@ -1,4 +1,4 @@
-# Gauge Chart
+# Network Diagram
 A Network Diagram for DataStudio.
 
 ![image](https://user-images.githubusercontent.com/47331711/109514777-ac5f0400-7aa6-11eb-94d4-941272348134.png)
