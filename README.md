@@ -22,4 +22,8 @@ For example like [this](https://docs.google.com/spreadsheets/d/1NVlUgqVS03_PWr9l
 
 ![image](https://user-images.githubusercontent.com/47331711/109515680-a4ec2a80-7aa7-11eb-9a22-b1fbf83be89e.png)
 
+# Logo
+
+![network_logo](https://user-images.githubusercontent.com/47331711/111799630-7ce43000-88cb-11eb-91c5-1859d2c21277.png)
+
 
