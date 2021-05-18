@@ -4,7 +4,7 @@ const local = require('./localMessage.js');
 
 // change this to 'true' for local development
 // change this to 'false' before deploying
-export const LOCAL = true;
+export const LOCAL = false;
 
 
 // parse the style value
@@ -18,7 +18,6 @@ const styleVal = (message, styleId) => {
       ? message.style[styleId].value
       : message.style[styleId].defaultValue;
 };
-  
 
 const drawViz = message => {
   
