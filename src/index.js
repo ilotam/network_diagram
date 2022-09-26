@@ -21,12 +21,12 @@ const styleVal = (message, styleId) => {
 
 const drawViz = message => {
   
-    var margin = {top: 10, right: 30, bottom: 30, left: 40},
+    let margin = {top: 10, right: 30, bottom: 30, left: 40},
     width = 400 - margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
 
     // append the svg object to the body of the page
-    var svg = d3.select("body")
+    let svg = d3.select("body")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -34,32 +34,22 @@ const drawViz = message => {
     .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
 
-    var tblList = message.tables.DEFAULT;
-    var links = tblList.map(row => {
-    
-                
+    let tblList = message.tables.DEFAULT;
+    let links = tblList.map(row => {
         return {
-           
-            source: row["metric"][0],   
+            source: row["metric"][0],
             target:  row["metric"][1]
-        }  
+        }
     });
-    var nodes = tblList.map(row => {
-    
-                
+    let nodes = tblList.map(row => {
         return {
             id: row["dimension"][0],
             name: row["dimension"][1]
-           
         }  
     });
 
-    console.log(links);
-    console.log(nodes);
-    //d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/data_network.json", function( data) {
-    //console.log(data);
     // Initialize the links
-    var link = svg
+    let link = svg
         .selectAll("line")
         .data(links)
         .enter()
@@ -67,7 +57,7 @@ const drawViz = message => {
         .style("stroke", "#aaa")
 
     // Initialize the nodes
-    var node = svg
+    let node = svg
         .selectAll("circle")
         .data(nodes)
         .enter()
@@ -97,11 +87,8 @@ const drawViz = message => {
             .attr("cx", function (d) { return d.x+6; })
             .attr("cy", function(d) { return d.y-6; });
     }
-
-    
-    
-
 };
+
 // renders locally
 if (LOCAL) {
   drawViz(local.message);
